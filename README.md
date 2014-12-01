@@ -20,6 +20,8 @@ with CommandPrompt (Windows)
 
 ### Example
 
+#### Create a project
+
 ```
 $ mvn archetype:generate -B\
  -DarchetypeGroupId=am.ik.archetype\
@@ -66,11 +68,23 @@ Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-bla
 [INFO] Finished at: Wed Oct 08 09:20:27 JST 2014
 [INFO] Final Memory: 15M/109M
 [INFO] ------------------------------------------------------------------------
+```
 
+#### Build the application
+
+```
 $ mvn clean package
 $ cd target
-$ sudo docker build spring-boot-docker-demo .
+$ sudo docker build -t spring-boot-docker-demo .
 ```
+
+#### Deploy to Docker container
+
+```
+$ sudo docker run -p 8080:8080 -t spring-boot-docker-demo
+```
+Go to http://localhost:8080
+
 
 ## License
 
