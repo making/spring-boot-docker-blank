@@ -18,60 +18,36 @@
     </parent>
     <licenses><!-- DELETE THIS LINE -->
         <license><!-- DELETE THIS LINE -->
-            <name>Apache License, Version 2.0</name>
-            <!-- DELETE THIS LINE -->
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <!-- DELETE THIS LINE -->
-            <distribution>repo</distribution>
-            <!-- DELETE THIS LINE -->
-        </license>
-        <!-- DELETE THIS LINE -->
-    </licenses>
-    <!-- DELETE THIS LINE -->
+            <name>Apache License, Version 2.0</name><!-- DELETE THIS LINE -->
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url><!-- DELETE THIS LINE -->
+            <distribution>repo</distribution><!-- DELETE THIS LINE -->
+        </license><!-- DELETE THIS LINE -->
+    </licenses><!-- DELETE THIS LINE -->
     <scm><!-- DELETE THIS LINE -->
-        <url>https://github.com/making/spring-boot-docker-blank</url>
-        <!-- DELETE THIS LINE -->
-        <connection>scm:git:git@github.com:making/spring-boot-docker-blank.git</connection>
-        <!-- DELETE THIS LINE -->
-        <developerConnection>scm:git:git@github.com:making/spring-boot-docker-blank.git</developerConnection>
-        <!-- DELETE THIS LINE -->
-    </scm>
-    <!-- DELETE THIS LINE -->
-    <url>https://github.com/making/spring-boot-docker-blank</url>
-    <!-- DELETE THIS LINE -->
-    <description>Docker Blank Project for Spring Boot</description>
-    <!-- DELETE THIS LINE -->
+        <url>https://github.com/making/spring-boot-docker-blank</url><!-- DELETE THIS LINE -->
+        <connection>scm:git:git@github.com:making/spring-boot-docker-blank.git</connection><!-- DELETE THIS LINE -->
+        <developerConnection>scm:git:git@github.com:making/spring-boot-docker-blank.git</developerConnection><!-- DELETE THIS LINE -->
+    </scm><!-- DELETE THIS LINE -->
+    <url>https://github.com/making/spring-boot-docker-blank</url><!-- DELETE THIS LINE -->
+    <description>Docker Blank Project for Spring Boot</description><!-- DELETE THIS LINE -->
     <developers><!-- DELETE THIS LINE -->
         <developer><!-- DELETE THIS LINE -->
-            <id>making</id>
-            <!-- DELETE THIS LINE -->
-            <name>Toshiaki Maki</name>
-            <!-- DELETE THIS LINE -->
-            <email>makingx@gmail.com</email>
-            <!-- DELETE THIS LINE -->
-            <url>https://twitter.com/making</url>
-            <!-- DELETE THIS LINE -->
-        </developer>
-        <!-- DELETE THIS LINE -->
-    </developers>
-    <!-- DELETE THIS LINE -->
+            <id>making</id><!-- DELETE THIS LINE -->
+            <name>Toshiaki Maki</name><!-- DELETE THIS LINE -->
+            <email>makingx@gmail.com</email><!-- DELETE THIS LINE -->
+            <url>https://twitter.com/making</url><!-- DELETE THIS LINE -->
+        </developer><!-- DELETE THIS LINE -->
+    </developers><!-- DELETE THIS LINE -->
     <distributionManagement><!-- DELETE THIS LINE -->
         <snapshotRepository><!-- DELETE THIS LINE -->
-            <id>ossrh</id>
-            <!-- DELETE THIS LINE -->
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <!-- DELETE THIS LINE -->
-        </snapshotRepository>
-        <!-- DELETE THIS LINE -->
+            <id>ossrh</id><!-- DELETE THIS LINE -->
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url><!-- DELETE THIS LINE -->
+        </snapshotRepository><!-- DELETE THIS LINE -->
         <repository><!-- DELETE THIS LINE -->
-            <id>ossrh</id>
-            <!-- DELETE THIS LINE -->
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-            <!-- DELETE THIS LINE -->
-        </repository>
-        <!-- DELETE THIS LINE -->
-    </distributionManagement>
-    <!-- DELETE THIS LINE -->
+            <id>ossrh</id><!-- DELETE THIS LINE -->
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url><!-- DELETE THIS LINE -->
+        </repository><!-- DELETE THIS LINE -->
+    </distributionManagement><!-- DELETE THIS LINE -->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
