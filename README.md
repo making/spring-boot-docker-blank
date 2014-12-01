@@ -22,12 +22,12 @@ with CommandPrompt (Windows)
 
 ```
 $ mvn archetype:generate -B\
->  -DarchetypeGroupId=am.ik.archetype\
->  -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
->  -DarchetypeVersion=0.9.0\
->  -DgroupId=com.example\
->  -DartifactId=hajiboot\
->  -Dversion=1.0.0-SNAPSHOT
+ -DarchetypeGroupId=am.ik.archetype\
+ -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
+ -DarchetypeVersion=0.9.0\
+ -DgroupId=com.example\
+ -DartifactId=hajiboot\
+ -Dversion=1.0.0-SNAPSHOT
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ------------------------------------------------------------------------
@@ -67,8 +67,9 @@ Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-bla
 [INFO] Final Memory: 15M/109M
 [INFO] ------------------------------------------------------------------------
 
-$ mvn test -f hajiboot/pom.xml
-... Starts end to end test ;)
+$ mvn clean package
+$ cd target
+$ sudo docker build spring-boot-docker-demo . -f Dockerfile.txt
 ```
 
 ## License
