@@ -1,16 +1,6 @@
-# Spring Boot Blank
+# Spring Boot Docker Blank
 
-Maven archetype to create a pre-configured maven project for Spring Boot Application
-
-Supports
-
-* Jetty
-* HikariCP
-* log4jdbc-log4j2
-* Lombok
-* REST Assured (for E2E test)
-
-[![Build Status](https://travis-ci.org/making/spring-boot-blank.svg)](https://travis-ci.org/making/spring-boot-blank)
+Maven archetype to create a docker-configured maven project for Spring Boot Application
 
 ## How to use
 
@@ -18,23 +8,23 @@ with Bash
 
     mvn archetype:generate\
      -DarchetypeGroupId=am.ik.archetype\
-     -DarchetypeArtifactId=spring-boot-blank-archetype\
-     -DarchetypeVersion=0.10.2
+     -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
+     -DarchetypeVersion=0.9.0
 
 with CommandPrompt (Windows)
 
     mvn archetype:generate^
      -DarchetypeGroupId=am.ik.archetype^
-     -DarchetypeArtifactId=spring-boot-blank-archetype^
-     -DarchetypeVersion=0.10.2
+     -DarchetypeArtifactId=spring-boot-docker-blank-archetype^
+     -DarchetypeVersion=0.9.0
 
 ### Example
 
 ```
 $ mvn archetype:generate -B\
 >  -DarchetypeGroupId=am.ik.archetype\
->  -DarchetypeArtifactId=spring-boot-blank-archetype\
->  -DarchetypeVersion=0.10.2\
+>  -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
+>  -DarchetypeVersion=0.9.0\
 >  -DgroupId=com.example\
 >  -DartifactId=hajiboot\
 >  -Dversion=1.0.0-SNAPSHOT
@@ -52,12 +42,12 @@ $ mvn archetype:generate -B\
 [INFO] Generating project in Batch mode
 [WARNING] Archetype not found in any catalog. Falling back to central repository (http://repo1.maven.org/maven2).
 [WARNING] Use -DarchetypeRepository=<your repository> if archetype's repository is elsewhere.
-Downloading: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-blank-archetype/0.10.2/spring-boot-blank-archetype-0.10.2.jar
-Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-blank-archetype/0.10.2/spring-boot-blank-archetype-0.10.2.jar (6 KB at 7.5 KB/sec)
-Downloading: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-blank-archetype/0.10.2/spring-boot-blank-archetype-0.10.2.pom
-Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-blank-archetype/0.10.2/spring-boot-blank-archetype-0.10.2.pom (3 KB at 3.8 KB/sec)
+Downloading: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-blank-archetype/0.10.2/spring-boot-docker-blank-archetype-0.10.2.jar
+Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-blank-archetype/0.10.2/spring-boot-docker-blank-archetype-0.10.2.jar (6 KB at 7.5 KB/sec)
+Downloading: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-blank-archetype/0.10.2/spring-boot-docker-blank-archetype-0.10.2.pom
+Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-blank-archetype/0.10.2/spring-boot-docker-blank-archetype-0.10.2.pom (3 KB at 3.8 KB/sec)
 [INFO] ----------------------------------------------------------------------------
-[INFO] Using following parameters for creating project from Archetype: spring-boot-blank-archetype:0.10.2
+[INFO] Using following parameters for creating project from Archetype: spring-boot-docker-blank-archetype:0.10.2
 [INFO] ----------------------------------------------------------------------------
 [INFO] Parameter: groupId, Value: com.example
 [INFO] Parameter: artifactId, Value: hajiboot
@@ -76,32 +66,6 @@ Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-blank-arch
 [INFO] Finished at: Wed Oct 08 09:20:27 JST 2014
 [INFO] Final Memory: 15M/109M
 [INFO] ------------------------------------------------------------------------
-
-$ find . | sort | sed '1d;s,[^/]*/,|    ,g;s/..//;s/[^ ]*$/|-- &/'
-   |-- hajiboot
-   |    |-- pom.xml
-   |    |-- src
-   |    |    |-- main
-   |    |    |    |-- java
-   |    |    |    |    |-- com
-   |    |    |    |    |    |-- example
-   |    |    |    |    |    |    |-- App.java
-   |    |    |    |    |    |    |-- AppConfig.java
-   |    |    |    |    |    |    |-- HelloController.java
-   |    |    |    |-- resources
-   |    |    |    |    |-- application.yml
-   |    |    |    |    |-- log4jdbc.log4j2.properties
-   |    |    |    |    |-- logback.xml
-   |    |    |    |    |-- templates
-   |    |    |    |    |    |-- hello.html
-   |    |    |-- test
-   |    |    |    |-- java
-   |    |    |    |    |-- com
-   |    |    |    |    |    |-- example
-   |    |    |    |    |    |    |-- HelloControllerTest.java
-   |    |    |    |-- resources
-   |    |    |    |    |-- .gitkeep
-
 
 $ mvn test -f hajiboot/pom.xml
 ... Starts end to end test ;)

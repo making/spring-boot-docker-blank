@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>am.ik.archetype</groupId>
-    <artifactId>spring-boot-blank</artifactId>
-    <version>0.10.2</version>
+    <artifactId>spring-boot-docker-blank</artifactId>
+    <version>0.9.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Spring Boot Blank Project (from https://github.com/making/spring-boot-blank)</name>
+    <name>Spring Boot Docker Blank Project (from https://github.com/making/spring-boot-blank)</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -24,12 +24,12 @@
         </license><!-- DELETE THIS LINE -->
     </licenses><!-- DELETE THIS LINE -->
     <scm><!-- DELETE THIS LINE -->
-        <url>https://github.com/making/spring-boot-blank</url><!-- DELETE THIS LINE -->
-        <connection>scm:git:git@github.com:making/spring-boot-blank.git</connection><!-- DELETE THIS LINE -->
-        <developerConnection>scm:git:git@github.com:making/spring-boot-blank.git</developerConnection><!-- DELETE THIS LINE -->
+        <url>https://github.com/making/spring-boot-docker-blank</url><!-- DELETE THIS LINE -->
+        <connection>scm:git:git@github.com:making/spring-boot-docker-blank.git</connection><!-- DELETE THIS LINE -->
+        <developerConnection>scm:git:git@github.com:making/spring-boot-docker-blank.git</developerConnection><!-- DELETE THIS LINE -->
     </scm><!-- DELETE THIS LINE -->
-    <url>https://github.com/making/spring-boot-blank</url><!-- DELETE THIS LINE -->
-    <description>Blank Project for Spring Boot</description><!-- DELETE THIS LINE -->
+    <url>https://github.com/making/spring-boot-docker-blank</url><!-- DELETE THIS LINE -->
+    <description>Docker Blank Project for Spring Boot</description><!-- DELETE THIS LINE -->
     <developers><!-- DELETE THIS LINE -->
         <developer><!-- DELETE THIS LINE -->
             <id>making</id><!-- DELETE THIS LINE -->
@@ -53,65 +53,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>xxxxxx.yyyyyy.zzzzzz.App</start-class>
         <java.version>1.8</java.version>
-        <lombok.version>1.14.8</lombok.version>
-        <log4jdbc.log4j2.version>1.16</log4jdbc.log4j2.version>
-        <rest.assured.version>2.3.3</rest.assured.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.tomcat</groupId>
-                    <artifactId>tomcat-jdbc</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.bgee.log4jdbc-log4j2</groupId>
-            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-            <version>${log4jdbc.log4j2.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.jayway.restassured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest.assured.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -148,7 +99,28 @@
                     </dependency>
                 </dependencies>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/docker</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>
