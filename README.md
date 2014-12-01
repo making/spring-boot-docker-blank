@@ -69,7 +69,7 @@ Downloaded: http://repo1.maven.org/maven2/am/ik/archetype/spring-boot-docker-bla
 
 $ mvn clean package
 $ cd target
-$ sudo docker build spring-boot-docker-demo . -f Dockerfile.txt
+$ sudo docker build spring-boot-docker-demo .
 ```
 
 ## License
