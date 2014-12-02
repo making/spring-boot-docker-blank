@@ -47,7 +47,7 @@ $ sudo docker run -p 8080:8080 -t spring-boot-docker-demo
 ```
 Access [http://localhost:8080](http://localhost:8080)
 
-## Deploy to AWS Elastic Beanstalk
+### Deploy to AWS Elastic Beanstalk
 
 At `target` directory after `mvn package`
 
