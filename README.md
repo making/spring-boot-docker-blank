@@ -9,14 +9,14 @@ with Bash
     mvn archetype:generate\
      -DarchetypeGroupId=am.ik.archetype\
      -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
-     -DarchetypeVersion=0.9.0
+     -DarchetypeVersion=1.0.0
 
 with CommandPrompt (Windows)
 
     mvn archetype:generate^
      -DarchetypeGroupId=am.ik.archetype^
      -DarchetypeArtifactId=spring-boot-docker-blank-archetype^
-     -DarchetypeVersion=0.9.0
+     -DarchetypeVersion=1.0.0
 
 ### Example
 
@@ -26,7 +26,7 @@ with CommandPrompt (Windows)
 $ mvn archetype:generate -B\
  -DarchetypeGroupId=am.ik.archetype\
  -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
- -DarchetypeVersion=0.9.0\
+ -DarchetypeVersion=1.0.0\
  -DgroupId=com.example\
  -DartifactId=hajiboot\
  -Dversion=1.0.0-SNAPSHOT
@@ -49,7 +49,9 @@ Access [http://localhost:8080](http://localhost:8080)
 
 ### Deploy to AWS Elastic Beanstalk
 
-At `target` directory after `mvn package`
+At `target` directory after `mvn package`, you can find `app.zip`.
+
+This file has been created automatically like following
 
 ```
 $ zip app.zip Dockerfile Dockerrun.aws.json *.jar
