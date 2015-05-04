@@ -9,14 +9,14 @@ with Bash
     mvn archetype:generate\
      -DarchetypeGroupId=am.ik.archetype\
      -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
-     -DarchetypeVersion=1.0.5
+     -DarchetypeVersion=2.0.0
 
 with CommandPrompt (Windows)
 
     mvn archetype:generate^
      -DarchetypeGroupId=am.ik.archetype^
      -DarchetypeArtifactId=spring-boot-docker-blank-archetype^
-     -DarchetypeVersion=1.0.5
+     -DarchetypeVersion=2.0.0
 
 ### Example
 
@@ -26,7 +26,7 @@ with CommandPrompt (Windows)
 $ mvn archetype:generate -B\
  -DarchetypeGroupId=am.ik.archetype\
  -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
- -DarchetypeVersion=1.0.5\
+ -DarchetypeVersion=2.0.0\
  -DgroupId=com.example\
  -DartifactId=hajiboot\
  -Dversion=1.0.0-SNAPSHOT
@@ -36,16 +36,27 @@ $ mvn archetype:generate -B\
 
 ```
 $ mvn clean package
-$ cd target
-$ sudo docker build -t spring-boot-docker-demo .
+$ mvn docker:build
 ```
+
+The name of built image will be `${USER}/<Your ArtifactId>` as default.
+
+
+Specify `-Ddocker.image.prefix=<docker image prefix>` if you want to change it.
+
+```
+$ mvn docker:build -Ddocker.image.prefix=making
+```
+
+will build `making/<Your ArtifactId>`.
+
 
 #### Deploy to Docker container
 
 ```
-$ sudo docker run -p 8080:8080 -t spring-boot-docker-demo
+$ sudo docker run -p 8080:8080 ${USER}/<Your ArtifactId>
 ```
-Access [http://localhost:8080](http://localhost:8080)
+Access http://<Docker Host>:8080
 
 ### Deploy to AWS Elastic Beanstalk
 
