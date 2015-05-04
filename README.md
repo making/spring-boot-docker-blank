@@ -56,7 +56,7 @@ will build `making/<Your ArtifactId>`.
 ```
 $ sudo docker run -p 8080:8080 ${USER}/<Your ArtifactId>
 ```
-Access http://<Docker Host>:8080
+Access `http://<Docker Host>:8080`
 
 ### Deploy to AWS Elastic Beanstalk
 
