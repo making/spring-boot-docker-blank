@@ -9,14 +9,14 @@ with Bash
     mvn archetype:generate\
      -DarchetypeGroupId=am.ik.archetype\
      -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
-     -DarchetypeVersion=2.0.0
+     -DarchetypeVersion=2.0.1
 
 with CommandPrompt (Windows)
 
     mvn archetype:generate^
      -DarchetypeGroupId=am.ik.archetype^
      -DarchetypeArtifactId=spring-boot-docker-blank-archetype^
-     -DarchetypeVersion=2.0.0
+     -DarchetypeVersion=2.0.1
 
 ### Example
 
@@ -26,7 +26,7 @@ with CommandPrompt (Windows)
 $ mvn archetype:generate -B\
  -DarchetypeGroupId=am.ik.archetype\
  -DarchetypeArtifactId=spring-boot-docker-blank-archetype\
- -DarchetypeVersion=2.0.0\
+ -DarchetypeVersion=2.0.1\
  -DgroupId=com.example\
  -DartifactId=hajiboot\
  -Dversion=1.0.0-SNAPSHOT
