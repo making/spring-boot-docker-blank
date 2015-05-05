@@ -4,4 +4,4 @@ VOLUME /tmp
 ADD projectName.jar /opt/projectName/
 EXPOSE 8080
 WORKDIR /opt/projectName/
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-Xmx1g", "-jar", "projectName.jar"]
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-Xmx1g", "-jar", "projectName.jar"]
